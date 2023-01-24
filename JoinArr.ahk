@@ -7,12 +7,12 @@
         case true:
             if (VerCompare(A_AhkVersion,"2.0-")>=0)
                 c_delim:=(dpt<=delim.Length)
-                            ?delim[dpt]
-                            :delim[delim.Length]
+                        ?delim[dpt]
+                        :delim[delim.Length]
             else
                 c_delim:=(dpt<=delim.Length())
-                    ?delim[dpt]
-                    :delim[delim.Length()]
+                        ?delim[dpt]
+                        :delim[delim.Length()]
         case false:
             c_delim:=delim
     }
