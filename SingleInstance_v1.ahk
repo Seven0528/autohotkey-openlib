@@ -35,6 +35,11 @@
         DetectHiddenWindows, % prev_DetectHiddenWindows
     }
 }
+; SingleInstance Force issue
+; https://www.autohotkey.com/boards/viewtopic.php?t=34595
+; #SingleInstance force and start as admin
+; https://www.autohotkey.com/boards/viewtopic.php?t=23451
+
 ; New Process Notifier
 ; https://www.autohotkey.com/board/topic/56984-new-process-notifier/
 ; [How to] Hook on to Shell to receive its messages?
