@@ -1,4 +1,4 @@
-﻿JoinArr(array, delim:="",sep:=" : ",l_obj:="[",r_obj:="]")    {
+﻿JoinArr(array, delim:="",sep:=" : ",l_obj:="[",r_obj:="]")    { ; v
 	static dpt:=0
 	dpt++
     (delim==""?delim:=["`n",", "]:"")
