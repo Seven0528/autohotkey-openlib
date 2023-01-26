@@ -1,4 +1,4 @@
-﻿HotkeySplit(vhotkey)    { ; v1.0
+﻿HotkeySplit(vhotkey)    { ; v1.1
     if !RegExMatch(vhotkey,"iDO)^(?P<pre>~?)(?P<k1>.+?)[ `t]+&[ `t]+(?P<k2>.+?)(?P<up>[ `t]+up)?$",m)
     && !RegExMatch(vhotkey,"iDO)^(?P<pre>[\Q#!^+&<>*~$\E]*)"
                         . "(?P<k2>[^a-zA-Z0-9]|[a-zA-Z0-9]+?)(?P<up>[ `t]+up)?$",m)

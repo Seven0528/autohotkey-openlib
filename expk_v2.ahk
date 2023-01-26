@@ -1,4 +1,4 @@
-﻿expk(keys, allow_dup:=false)    { ; abbreviation for explicit keys
+﻿expk(keys, allow_dup:=false)    { ; v2.0  abbreviation for explicit keys
     static transl_map:=Map("^","Ctrl","+","Shift","!","Alt","#","Win"
                     ,"<^","LCtrl","<+","LShift","<!","LAlt","<#","LWin"
                     ,">^","RCtrl",">+","RShift",">!","RAlt",">#","RWin")

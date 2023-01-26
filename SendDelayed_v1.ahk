@@ -1,5 +1,9 @@
-﻿SendDelayed(keys, keydelay:="", transl_only:=false)    {
+﻿SendDelayed(keys, keydelay:="")    { ; v1.1
     static transl_map:={"`n":"{Enter}","`r":"{Enter}","`t":"{Tab}","`b":"{BS}"}
+    if RegExMatch(keydelay,"is`aO)^ret(.*)",m)
+        transl_only:=true, keydelay:=m.1
+    else
+        transl_only:=false
     (keydelay==""?keydelay:=A_KeyDelay:"", keydelay~="[^\d]"?keydelay:=10:"")
     ,sleep_key:="{Sleep " keydelay "}"
     ;---------------------------------
@@ -35,7 +39,7 @@
         }
     }
 
-    Switch !!transl_only
+    Switch transl_only
     {
         case true:      return out1 . out2
         case false:     SendInput, % out1 . out2
