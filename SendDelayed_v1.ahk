@@ -11,7 +11,7 @@
     if (usualKeys!="")    {
         spo:=1
         While (fpo:=RegExMatch(usualKeys
-        , "s`aO)(?<!\{)(?P<affix>(?:[<>]?[\Q^+!#\E])+)"
+        , "s`aO)(?<!\{)(?P<affix>(?:[<>]?[\Q^+!#\E])*)"
         . "(?P<main>\{.+?}|[^\Q^+!#{}\E])",m,spo))    {
             vsimple:=SubStr(usualKeys,spo,fpo-spo), vsimple:=RegExReplace(vsimple,"s`a)(.)","${1}" sleep_key)
             ,vcombi:=m.0 sleep_key
