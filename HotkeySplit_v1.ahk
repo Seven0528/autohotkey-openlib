@@ -18,3 +18,4 @@
                     . ahotkey.MainKey . (ahotkey.IsMainUp?" Up":"")
     return ahotkey
 }
+#Include <HotkeyTitleCase>
