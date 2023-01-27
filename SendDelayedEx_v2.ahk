@@ -10,7 +10,10 @@
         }  else  {
             prev_KeyDelay:=""
         }
-        For k,v in modifierkey_state:=Map("Ctrl",GetKeyState("Ctrl","P"),"Alt",GetKeyState("Alt","P"),"Shift",GetKeyState("Shift","P"),"LWin",GetKeyState("LWin","P"),"RWin",GetKeyState("RWin","P"))
+        For k,v in modifierkey_state:=Map("LCtrl",GetKeyState("LCtrl","P"),"RCtrl",GetKeyState("RCtrl","P")
+                                        ,"LAlt",GetKeyState("LAlt","P"),"RAlt",GetKeyState("RAlt","P")
+                                        ,"LShift",GetKeyState("LShift","P"),"RShift",GetKeyState("RShift","P")
+                                        ,"LWin",GetKeyState("LWin","P"),"RWin",GetKeyState("RWin","P"))
             (v?modifierkey_blindup.="{" k " up}":"")
         SendEvent("{Blind}" modifierkey_blindup)
     }
