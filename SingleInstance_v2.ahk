@@ -1,9 +1,9 @@
 ﻿Class SingleInstance ; v2.0
 {
-    ShellMessageFunc := ObjBindMethod(this,"ShellMessage")
-    ,DeforceFunc := ObjBindMethod(this,"DeForce")
+    static ShellMessageFunc := ObjBindMethod(SingleInstance,"ShellMessage")
+            ,DeforceFunc := ObjBindMethod(SingleInstance,"DeForce")
 
-    Force(include_otherdir:=false, ext_needle:="(exe|ahk)")    {
+    static Force(include_otherdir:=false, ext_needle:="(exe|ahk)")    {
         SplitPath(A_ScriptFullPath, &outfilename, &outdir, &outextension, &outnamenoext, &outdrive)
         ,this.include_otherdir:=!!include_otherdir, this.ext_needle:=ext_needle
         ,this.outfilename:=outfilename, this.outdir:=outdir, this.outextension:=outextension, this.outnamenoext:=outnamenoext, this.outdrive:=outdrive
@@ -11,10 +11,10 @@
         ,OnMessage(this.MsgNum:=DllCall("RegisterWindowMessage", "Str","SHELLHOOK"), this.ShellMessageFunc)
         ,OnExit(this.DeforceFunc)
     }
-    DeForce(*)    {
+    static DeForce(*)    {
         DllCall("DeregisterShellHookWindow", "UInt",A_ScriptHwnd)
     }
-    ShellMessage(wParam, lParam, *)    {
+    static ShellMessage(wParam, lParam, *)    {
         static EVENT_SYSTEM_DIALOGSTART:=0x0010
         prev_DetectHiddenWindows:=A_DetectHiddenWindows
         ,DetectHiddenWindows(true)

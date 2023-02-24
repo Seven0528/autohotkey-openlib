@@ -1,0 +1,3 @@
+﻿Sleep(Delay)    {
+    Sleep % Delay
+}

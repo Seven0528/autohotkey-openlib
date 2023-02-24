@@ -1,5 +1,5 @@
 ﻿expk(keys, allow_dup:=false)    { ; v2.0  abbreviation for explicit keys
-    static transl_map:=Map("^","Ctrl","+","Shift","!","Alt","#","Win"
+    static transl_map:=Map("^","Ctrl","+","Shift","!","Alt","#","LWin"
                     ,"<^","LCtrl","<+","LShift","<!","LAlt","<#","LWin"
                     ,">^","RCtrl",">+","RShift",">!","RAlt",">#","RWin")
     RegExMatch(keys,"isD`a)^(.*?)(\{Text}|\{Raw})(.*)$",&m)

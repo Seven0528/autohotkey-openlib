@@ -1,0 +1,3 @@
+﻿SendEvent(Keys)    {
+    SendEvent % Keys
+}

@@ -1,0 +1,1 @@
+﻿#Include %A_MyDocuments%\AutoHotkey\Lib__private\IME_v1.ahk
